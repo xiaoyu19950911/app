@@ -1,0 +1,42 @@
+spring:
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/ds_0?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: 123456
+      type: org.apache.commons.dbcp2.BasicDataSource
+      dbcp2:
+        default-auto-commit: true
+        initial-size: 30
+        max-total: 120
+        max-idle: 120
+        min-idle: 30
+        max-wait-millis: 10000
+        validation-query: 'SELECT 1'
+        validation-query-timeout: 3
+        test-on-borrow: true
+        test-while-idle: true
+        time-between-eviction-runs-millis: 10000
+        num-tests-per-eviction-run: 10
+        min-evictable-idle-time-millis: 120000
+        remove-abandoned-on-borrow: true
+        remove-abandoned-timeout: 120
+        pool-prepared-statements: true
+db_0:
+  url: jdbc:mysql://localhost:3306/ds_0?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+  username: root
+  password: 123456
+db_1:
+  url: jdbc:mysql://47.98.108.55:3306/ds_1?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+  username: xiaoyu
+  password: 123456
+
+
+
+
+
